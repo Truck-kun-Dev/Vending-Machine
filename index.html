@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Page styling */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            min-height: 100vh;
+            /* min-width: 100vw; */
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #aef1f7;
+        }
+
+        h1{
+            width: 100%;
+            background-color: white;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        table{
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        thead{
+            width: 100%;
+            background-color: aqua;
+            padding: 10px;
+            font-weight: bolder;
+            border-bottom: 2px solid white;
+        }
+        th, td{
+            padding: 10px;
+            border-bottom: 1px solid black;
+        }
+        table > tbody > tr:last-of-type > td:not(:last-child){
+            border: none;
+        }
+
+        /* Container grid */
+        #cardContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Card */
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Hover effect */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Image */
+        .card img {
+            width: 100%;
+            height: 140px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        /* Info section */
+        .info {
+            min-height: 50px;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Product name */
+        .productName {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Price */
+        .productPrice {
+            font-size: 16px;
+            color: #2ecc71;
+            font-weight: 600;
+        }
+
+        .ammountContainer {
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        /* Buttons (+ and -) */
+        .decrease,
+        .increase {
+            width: 32px;
+            height: 32px;
+            background: rgb(87, 232, 251);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        /* Hover effect */
+        .decrease:hover {
+            background: red;
+            color: #fff;
+        }
+
+        .increase:hover {
+            background: #2ecc71;
+            color: #fff;
+        }
+
+        /* Click effect */
+        .decrease:active,
+        .increase:active {
+            transform: scale(0.9);
+        }
+
+        /* Amount display */
+        .ammount {
+            background-color: rgb(87, 232, 251);
+            min-width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+        .btnContainer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        #checkOutBtn,
+        #purchaseBtn,
+        #paymentBtn{
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: aqua;
+            padding: 10px;
+            border-radius: 12px;
+            width: max-content;
+        }
+        #cancelBtn{
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: white;
+            border: 2px solid aqua;
+            padding: 10px;
+            border-radius: 12px;
+            width: max-content;
+        }
+        #qrContainer{
+            width: 400px;
+            aspect-ratio: 1 / 1;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border: 2px solid aqua;
+            border-radius: 20px;
+        }
+        #qrImg{
+            width: 350px;
+            aspect-ratio: 1 / 1;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body id="body">
+</body>
+
+<script src="script1.js"></script>
+ <!-- <script src="script.js"></script> -->
+
+</html>
