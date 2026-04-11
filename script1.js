@@ -279,9 +279,8 @@ function paymentCheck() {
 }
 
 chooseProducts().
-catch(() => {console.log("Exited the Vending Machine")}).
 then(yourCart).
-catch(() => {console.log("Exited the Vending Machine")}).
 then(paymentCheck).
-catch(() => {console.log("Exited the Vending Machine")}).
-then(renderFinaleUI)
+then(renderFinaleUI).
+catch(() => {console.log("Exited the Vending Machine")})
+
