@@ -282,5 +282,6 @@ chooseProducts().
 then(yourCart).
 then(paymentCheck).
 then(renderFinaleUI).
-catch(() => {console.log("Exited the Vending Machine")})
+catch(() => {console.log("Exited the Vending Machine")
+renderFinaleUI();})
 
